@@ -13,4 +13,5 @@ func main() {
 
 	notice := fmt.Sprintf("Attacking %s endpoint with %d stands", *endpoint, *standQuantity)
 	fmt.Println(notice)
+
 }
