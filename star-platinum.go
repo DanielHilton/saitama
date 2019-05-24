@@ -30,7 +30,10 @@ func main() {
 
 	go waitForSignal(signals, done)
 	<-done
+	cleanup(stands)
+}
 
+func cleanup(stands []*star_platinum.Stand) {
 	for _, stand := range stands {
 		go stand.StopAttacking()
 	}
